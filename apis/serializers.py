@@ -4,7 +4,7 @@ from .models import Employee
 class Employeeserializer(serializers.ModelSerializer):
     class Meta:
         model=Employee
-        fields= ['name', 'email', 'department', 'role', 'date_joined']
+        fields= ['id','name', 'email', 'department', 'role', 'date_joined']
 
     def validate_name(self,value):
         if not value.strip():
